@@ -815,7 +815,7 @@ function advance_pet_care_customize_register($wp_customize) {
 	
 	$wp_customize->add_setting('advance_pet_care_mail1',array(
 		'default'	=> '',
-		'sanitize_callback'	=> 'advance_pet_care_sanitize_email',
+		'sanitize_callback'	=> 'sanitize_email',
 	));
 	$wp_customize->add_control('advance_pet_care_mail1',array(
 		'label'	=> __('Mail Address','advance-pet-care'),

@@ -263,11 +263,6 @@ function advance_pet_care_sanitize_phone_number( $phone ) {
 	return preg_replace( '/[^\d+]/', '', $phone );
 }
 
-function advance_pet_care_sanitize_email( $email, $setting ) {
-	$email = sanitize_email( $email );
-	return ( ! is_null( $email ) ? $email : $setting->default );
-}
-
 function advance_pet_care_sanitize_checkbox( $input ) {
 	return ( ( isset( $input ) && true == $input ) ? true : false );
 }
@@ -327,104 +322,100 @@ function advance_pet_care_scripts() {
 	wp_enqueue_style('advance-pet-care-font', advance_pet_care_font_url(), array());
 	// blocks-css
 	wp_enqueue_style( 'advance-pet-care-block-style', get_theme_file_uri('/css/blocks.css') );
-	wp_enqueue_style('bootstrap', esc_url(get_template_directory_uri()).'/css/bootstrap.css');
+	wp_enqueue_style('bootstrap-style', esc_url(get_template_directory_uri()).'/css/bootstrap.css');
 	wp_enqueue_style('advance-pet-care-basic-style', get_stylesheet_uri());
 	wp_enqueue_style('advance-pet-care-customcss', esc_url(get_template_directory_uri()).'/css/custom.css');
-	wp_enqueue_style('font-awesome', esc_url(get_template_directory_uri()).'/css/fontawesome-all.css');
+	wp_enqueue_style('font-awesome-style', esc_url(get_template_directory_uri()).'/css/fontawesome-all.css');
 
 	// Paragraph
-	    $advance_pet_care_paragraph_color = get_theme_mod('advance_pet_care_paragraph_color', '');
-	    $advance_pet_care_paragraph_font_family = get_theme_mod('advance_pet_care_paragraph_font_family', '');
-	    $advance_pet_care_paragraph_font_size = get_theme_mod('advance_pet_care_paragraph_font_size', '');
+    $advance_pet_care_paragraph_color = get_theme_mod('advance_pet_care_paragraph_color', '');
+    $advance_pet_care_paragraph_font_family = get_theme_mod('advance_pet_care_paragraph_font_family', '');
+    $advance_pet_care_paragraph_font_size = get_theme_mod('advance_pet_care_paragraph_font_size', '');
 	// "a" tag
-		$advance_pet_care_atag_color = get_theme_mod('advance_pet_care_atag_color', '');
-	    $advance_pet_care_atag_font_family = get_theme_mod('advance_pet_care_atag_font_family', '');
+	$advance_pet_care_atag_color = get_theme_mod('advance_pet_care_atag_color', '');
+    $advance_pet_care_atag_font_family = get_theme_mod('advance_pet_care_atag_font_family', '');
 	// "li" tag
-		$advance_pet_care_li_color = get_theme_mod('advance_pet_care_li_color', '');
-	    $advance_pet_care_li_font_family = get_theme_mod('advance_pet_care_li_font_family', '');
+	$advance_pet_care_li_color = get_theme_mod('advance_pet_care_li_color', '');
+    $advance_pet_care_li_font_family = get_theme_mod('advance_pet_care_li_font_family', '');
 	// H1
-		$advance_pet_care_h1_color = get_theme_mod('advance_pet_care_h1_color', '');
-	    $advance_pet_care_h1_font_family = get_theme_mod('advance_pet_care_h1_font_family', '');
-	    $advance_pet_care_h1_font_size = get_theme_mod('advance_pet_care_h1_font_size', '');
+	$advance_pet_care_h1_color = get_theme_mod('advance_pet_care_h1_color', '');
+    $advance_pet_care_h1_font_family = get_theme_mod('advance_pet_care_h1_font_family', '');
+    $advance_pet_care_h1_font_size = get_theme_mod('advance_pet_care_h1_font_size', '');
 	// H2
-		$advance_pet_care_h2_color = get_theme_mod('advance_pet_care_h2_color', '');
-	    $advance_pet_care_h2_font_family = get_theme_mod('advance_pet_care_h2_font_family', '');
-	    $advance_pet_care_h2_font_size = get_theme_mod('advance_pet_care_h2_font_size', '');
+	$advance_pet_care_h2_color = get_theme_mod('advance_pet_care_h2_color', '');
+    $advance_pet_care_h2_font_family = get_theme_mod('advance_pet_care_h2_font_family', '');
+    $advance_pet_care_h2_font_size = get_theme_mod('advance_pet_care_h2_font_size', '');
 	// H3
-		$advance_pet_care_h3_color = get_theme_mod('advance_pet_care_h3_color', '');
-	    $advance_pet_care_h3_font_family = get_theme_mod('advance_pet_care_h3_font_family', '');
-	    $advance_pet_care_h3_font_size = get_theme_mod('advance_pet_care_h3_font_size', '');
+	$advance_pet_care_h3_color = get_theme_mod('advance_pet_care_h3_color', '');
+    $advance_pet_care_h3_font_family = get_theme_mod('advance_pet_care_h3_font_family', '');
+    $advance_pet_care_h3_font_size = get_theme_mod('advance_pet_care_h3_font_size', '');
 	// H4
-		$advance_pet_care_h4_color = get_theme_mod('advance_pet_care_h4_color', '');
-	    $advance_pet_care_h4_font_family = get_theme_mod('advance_pet_care_h4_font_family', '');
-	    $advance_pet_care_h4_font_size = get_theme_mod('advance_pet_care_h4_font_size', '');
+	$advance_pet_care_h4_color = get_theme_mod('advance_pet_care_h4_color', '');
+    $advance_pet_care_h4_font_family = get_theme_mod('advance_pet_care_h4_font_family', '');
+    $advance_pet_care_h4_font_size = get_theme_mod('advance_pet_care_h4_font_size', '');
 	// H5
-		$advance_pet_care_h5_color = get_theme_mod('advance_pet_care_h5_color', '');
-	    $advance_pet_care_h5_font_family = get_theme_mod('advance_pet_care_h5_font_family', '');
-	    $advance_pet_care_h5_font_size = get_theme_mod('advance_pet_care_h5_font_size', '');
+	$advance_pet_care_h5_color = get_theme_mod('advance_pet_care_h5_color', '');
+    $advance_pet_care_h5_font_family = get_theme_mod('advance_pet_care_h5_font_family', '');
+    $advance_pet_care_h5_font_size = get_theme_mod('advance_pet_care_h5_font_size', '');
 	// H6
-		$advance_pet_care_h6_color = get_theme_mod('advance_pet_care_h6_color', '');
-	    $advance_pet_care_h6_font_family = get_theme_mod('advance_pet_care_h6_font_family', '');
-	    $advance_pet_care_h6_font_size = get_theme_mod('advance_pet_care_h6_font_size', '');
+	$advance_pet_care_h6_color = get_theme_mod('advance_pet_care_h6_color', '');
+    $advance_pet_care_h6_font_family = get_theme_mod('advance_pet_care_h6_font_family', '');
+    $advance_pet_care_h6_font_size = get_theme_mod('advance_pet_care_h6_font_size', '');
 
+	$advance_pet_care_custom_css ='
+		p,span{
+		    color:'.esc_html($advance_pet_care_paragraph_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_paragraph_font_family).';
+		    font-size: '.esc_html($advance_pet_care_paragraph_font_size).';
+		}
+		a{
+		    color:'.esc_html($advance_pet_care_atag_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_atag_font_family).';
+		}
+		li{
+		    color:'.esc_html($advance_pet_care_li_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_li_font_family).';
+		}
+		h1{
+		    color:'.esc_html($advance_pet_care_h1_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_h1_font_family).'!important;
+		    font-size: '.esc_html($advance_pet_care_h1_font_size).'!important;
+		}
+		h2{
+		    color:'.esc_html($advance_pet_care_h2_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_h2_font_family).'!important;
+		    font-size: '.esc_html($advance_pet_care_h2_font_size).'!important;
+		}
+		h3{
+		    color:'.esc_html($advance_pet_care_h3_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_h3_font_family).'!important;
+		    font-size: '.esc_html($advance_pet_care_h3_font_size).'!important;
+		}
+		h4{
+		    color:'.esc_html($advance_pet_care_h4_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_h4_font_family).'!important;
+		    font-size: '.esc_html($advance_pet_care_h4_font_size).'!important;
+		}
+		h5{
+		    color:'.esc_html($advance_pet_care_h5_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_h5_font_family).'!important;
+		    font-size: '.esc_html($advance_pet_care_h5_font_size).'!important;
+		}
+		h6{
+		    color:'.esc_html($advance_pet_care_h6_color).'!important;
+		    font-family: '.esc_html($advance_pet_care_h6_font_family).'!important;
+		    font-size: '.esc_html($advance_pet_care_h6_font_size).'!important;
+		}
 
-		$advance_pet_care_custom_css ='
-			p,span{
-			    color:'.esc_html($advance_pet_care_paragraph_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_paragraph_font_family).';
-			    font-size: '.esc_html($advance_pet_care_paragraph_font_size).';
-			}
-			a{
-			    color:'.esc_html($advance_pet_care_atag_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_atag_font_family).';
-			}
-			li{
-			    color:'.esc_html($advance_pet_care_li_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_li_font_family).';
-			}
-			h1{
-			    color:'.esc_html($advance_pet_care_h1_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_h1_font_family).'!important;
-			    font-size: '.esc_html($advance_pet_care_h1_font_size).'!important;
-			}
-			h2{
-			    color:'.esc_html($advance_pet_care_h2_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_h2_font_family).'!important;
-			    font-size: '.esc_html($advance_pet_care_h2_font_size).'!important;
-			}
-			h3{
-			    color:'.esc_html($advance_pet_care_h3_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_h3_font_family).'!important;
-			    font-size: '.esc_html($advance_pet_care_h3_font_size).'!important;
-			}
-			h4{
-			    color:'.esc_html($advance_pet_care_h4_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_h4_font_family).'!important;
-			    font-size: '.esc_html($advance_pet_care_h4_font_size).'!important;
-			}
-			h5{
-			    color:'.esc_html($advance_pet_care_h5_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_h5_font_family).'!important;
-			    font-size: '.esc_html($advance_pet_care_h5_font_size).'!important;
-			}
-			h6{
-			    color:'.esc_html($advance_pet_care_h6_color).'!important;
-			    font-family: '.esc_html($advance_pet_care_h6_font_family).'!important;
-			    font-size: '.esc_html($advance_pet_care_h6_font_size).'!important;
-			}
-
-			';
-		wp_add_inline_style( 'advance-pet-care-basic-style',$advance_pet_care_custom_css );
+	';
+	wp_add_inline_style( 'advance-pet-care-basic-style',$advance_pet_care_custom_css );
 	
-	wp_enqueue_script('SmoothScroll', esc_url(get_template_directory_uri()).'/js/SmoothScroll.js', array('jquery'));
 	wp_enqueue_script('advance-pet-care-customscripts-jquery', esc_url(get_template_directory_uri()).'/js/custom.js', array('jquery'));
-	wp_enqueue_script('bootstrap', esc_url(get_template_directory_uri()).'/js/bootstrap.js', array('jquery'));
+	wp_enqueue_script('bootstrap-jquery', esc_url(get_template_directory_uri()).'/js/bootstrap.js', array('jquery'));
 	wp_enqueue_script( 'jquery-superfish', esc_url(get_template_directory_uri()) . '/js/jquery.superfish.js', array('jquery') ,'',true);
 	require get_parent_theme_file_path( '/inc/ts-color-pallete.php' );
 	wp_add_inline_style( 'advance-pet-care-basic-style',$advance_pet_care_custom_css );
 
-	wp_enqueue_style('advance-pet-care-ie', esc_url(get_template_directory_uri()).'/css/ie.css', array('advance-pet-care-basic-style'));
-	wp_style_add_data('advance-pet-care-ie', 'conditional', 'IE');
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}

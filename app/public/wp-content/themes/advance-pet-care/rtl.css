@@ -1,4 +1,3 @@
-/*rtl css*/
 *{
   outline:none;
 }
@@ -208,7 +207,7 @@ input[type="submit"] {
   line-height: 1.5;
   font-family: 'Lobster', cursive;
 }
-.logo a{
+.logo a, h1.page-title{
   color: #0d7f71;
 }
 .logo p{
@@ -222,7 +221,7 @@ input[type="submit"] {
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 999999;
   overflow: hidden;
 }
 #loader {
@@ -308,7 +307,7 @@ input[type="submit"] {
   width: 51%;
   height: 100%;
   background: #222;
-  z-index: 10;
+  z-index: 99999;
 }
 #loader-wrapper .loader-section.section-left {
   right: 0;
@@ -348,7 +347,7 @@ input[type="submit"] {
   width: 100%;
   background: #fff;
   box-shadow: -2px 2px 10px 0px #2d2d2d;
-  z-index: 999999;
+  z-index: 9999;
 }
 /* ---------HEADER--------- */
 .top-header{
@@ -386,7 +385,7 @@ input[type="submit"] {
 }
 /* --------- Main Menu--------- */
 .cart_icon{
-  font-size: 20px;
+  font-size: 25px;
 }
 .cart_icon i{
   color: #fff;
@@ -416,7 +415,7 @@ input[type="submit"] {
   color: #fff;
   font-size: 13px;
   font-weight: 600;
-  padding: 20px;
+  padding: 15px 20px;
   text-transform: uppercase;
 }
 .primary-navigation ul ul{
@@ -424,7 +423,7 @@ input[type="submit"] {
   position: absolute;
   min-width: 215px;
   z-index: 999;
-  top:58px;
+  top:50px;
   border: 1px solid #b65741;
 }
 .primary-navigation ul ul li:first-child{
@@ -490,21 +489,16 @@ input[type="submit"] {
   font-family: 'Font Awesome 5 Free';
 }
 /*-----------------Search pop up----------------*/
-.serach_inner label {
-  width: 95%;
-}
 .serach_inner{
   background: #fff;
-  max-height: 40%;
-  min-height: 150px;
+  max-height: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: absolute;
-  transition: all 500ms;
+  position: relative;
   box-shadow: 0px 0px 12px #c0bebe;
+  transition: 1s height ease-in-out;
 }
-.closepop {
+.search-close {
   position: absolute;
   top: 0;
   font-size: 40px;
@@ -514,20 +508,21 @@ input[type="submit"] {
   background: none;
   border:none;
   cursor: pointer;
+  transition: 0.5s height ease-in-out;
 }
 .serach_inner form.search-form {
   width: calc(100% - 30px);
-  margin: 0 auto;
   color: #fff;
   border: none;
   border-bottom: 1px solid #eae6e6;
   position: absolute;
-  bottom: 2em;
+  bottom: 20px;
   display: table;
   padding: 0;
   border-radius: 0;
   background: #ffffff;
   max-width: 1200px;
+  text-align: right;
 }
 .serach_inner form.search-form label {
   width: 95%;
@@ -543,11 +538,50 @@ input[type="submit"] {
   font-weight: normal;
   color: #3a4d5e;
   max-height: 1200px;
+  border: 0;
 }
 .serach_inner input.search-submit {
   padding: 8px 35px;
   margin: 5px 0;
   font-size: 20px;
+}
+button.search-submit {
+  border: 0;
+  background: transparent;
+}
+.serach_inner input[type="submit"]{
+  text-indent: -9999px;
+  z-index: 9999;
+  background: url(images/search.png) no-repeat 100% 10px;
+  position: absolute;
+  margin:0;
+  background-size: 30px;
+}
+.search-box button{
+  background: transparent;
+  border: 0;
+}
+.search-outer {
+  background: rgb(0 0 0 / 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  visibility: hidden;
+  text-align: center;
+  height: 100%;
+  transition: 1s height ease-in-out;
+  z-index: 999;
+}
+body.search-focus .search-outer{
+  visibility: visible;
+  transition: 1s height ease-in-out;
+}
+body.admin-bar .serach_inner{
+  margin-top: 32px;
+}
+body.admin-bar .search-close{
+  top:30px;
 }
 button.search-submit {
   border: 0;
@@ -573,22 +607,6 @@ input.search-field {
   position: absolute;
   margin:0;
   background-size: 30px;
-}
-.modal-content{
-  background: transparent;
-  border: 0;
-}
-.modal-dialog{
-  pointer-events: all;
-}
-.modal-open{
-  overflow-y: scroll;
-}
-body.admin-bar .serach_inner{
-  margin-top: 32px;
-}
-body.admin-bar .closepop{
-  top:30px;
 }
 /* --------- Slider --------- */
 #slider{
@@ -698,7 +716,7 @@ body.admin-bar .closepop{
 .page-numbers.current {
   margin-bottom: 16px;
 }
-p.logged-in-as a, span.posted_in a. .woocommerce ul.products li.product .price,.woocommerce div.product p.price, .woocommerce div.product span.price, .metabox a, .post-title, a.showcoupon,.woocommerce-message::before{
+p.logged-in-as a, .woocommerce ul.products li.product .price,.woocommerce div.product p.price, .woocommerce div.product span.price, .metabox a, .post-title, a.showcoupon,.woocommerce-message::before{
   color: #3a4d5e;
 }
 .read-more-btn a {
@@ -1319,9 +1337,6 @@ img.rss-widget-icon {
 h2.entry-title{
   color: #3a4d5e;
 }
-h1.page-title {
-  color: #0d7f71;
-}
 .content-ts p{
   text-align:justify;
   font-size: 16px;
@@ -1356,7 +1371,6 @@ h1.page-title {
   margin:0 0 25px;
 }
 .content-ts ul{
-  list-style:none;
   margin:0 10px 0 0;
   padding:10px 0 0;
   font-size:16px;
@@ -1367,7 +1381,6 @@ h1.page-title {
   line-height:25px;
 }
 .content-ts ol{
-  list-style: none;
   padding:10px 0 0 0;
   font-size:16px;
   counter-reset: myCounter;

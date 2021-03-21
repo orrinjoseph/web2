@@ -3,10 +3,10 @@ Theme Name: Advance Pet Care
 Theme URI: https://www.themeshopy.com/themes/free-pet-wordpress-theme/
 Author: Themeshopy
 Author URI: https://www.themeshopy.com/
-Description: Advance Pet Care is a robust, reliable and clean WordPress theme for animal care centre, pet house, dog washing, dog grooming centre, animal care centre, pet shop, veterinary doctor, animal health consultant, animal spa, wildlife, pet sellers, pet sitters, pet boarding, dog & puppy daycare or pet sitting pet adoption centers, veterinary doctors, blue cross-service volunteers, pet trainers, pet shelters, pet care centers, dog care, aquarium shops, cat food shops, animal accessories store, animal grooming and training, pet food shop and other suitable websites. This high quality theme is the best solution to build a professional looking website in just a few minutes. The foundation of this pet WP theme is made with Bootstrap framework which eases theme use. It is fully responsive, cross-browser compatible, deeply customizable and compatibility of this theme lets you translate the web page into ar_Arabic, zh_Chinese, fr_French, de_German, es_Spanish, it_Italian, ja_Japanese, ru_Russian, tr_Turkish languages. Demo: https://www.themeshopy.com/advance-pet-care-pro/
+Description: Advance Pet Care is a robust, reliable and clean WordPress theme for animal care centre, pet house, dog washing, dog grooming centre, animal care centre, pet shop, veterinary doctor, animal health consultant, animal spa, wildlife, pet sellers, pet sitters,  pet boarding, dog & puppy daycare or pet sitting pet adoption centers, veterinary doctors, blue cross-service volunteers, apiculture, beekeeping, fish breeding, hatchery, pet trainers, pet shelters, pet care centers, dog care, aquarium shops, cat food shops, animal accessories store, animal grooming and training, pet food shop and other suitable websites. This high quality theme is the best solution to build a professional looking website in just a few minutes. The foundation of this pet WP theme is made with Bootstrap framework which eases theme use. It is fully responsive, cross-browser compatible, deeply customizable and compatibility of this theme lets you translate the web page into ar_Arabic, zh_Chinese, fr_French, de_German, es_Spanish, it_Italian, ja_Japanese, ru_Russian, tr_Turkish languages. Demo: https://www.themeshopy.com/advance-pet-care-pro/
 Tested up to: 5.6.2
 Requires PHP: 7.2.14
-Version: 0.6.9
+Version: 0.7
 License: GPLv3.0 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: advance-pet-care
@@ -241,7 +241,7 @@ input[type="submit"] {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 999999;
   overflow: hidden;
 }
 #loader {
@@ -327,7 +327,7 @@ input[type="submit"] {
   width: 51%;
   height: 100%;
   background: #222;
-  z-index: 10;
+  z-index: 99999;
 }
 #loader-wrapper .loader-section.section-left {
   left: 0;
@@ -367,7 +367,7 @@ input[type="submit"] {
   width: 100%;
   background: #fff;
   box-shadow: 2px 2px 10px 0px #2d2d2d;
-  z-index: 999999;
+  z-index: 9999;
 }
 /* ---------HEADER--------- */
 .top-header{
@@ -511,16 +511,14 @@ input[type="submit"] {
 /*-----------------Search pop up----------------*/
 .serach_inner{
   background: #fff;
-  max-height: 40%;
-  min-height: 150px;
+  max-height: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: absolute;
-  transition: all 500ms;
+  position: relative;
   box-shadow: 0px 0px 12px #c0bebe;
+  transition: 1s height ease-in-out;
 }
-.closepop {
+.search-close {
   position: absolute;
   top: 0;
   font-size: 40px;
@@ -530,20 +528,21 @@ input[type="submit"] {
   background: none;
   border:none;
   cursor: pointer;
+  transition: 0.5s height ease-in-out;
 }
 .serach_inner form.search-form {
   width: calc(100% - 30px);
-  margin: 0 auto;
   color: #fff;
   border: none;
   border-bottom: 1px solid #eae6e6;
   position: absolute;
-  bottom: 2em;
+  bottom: 20px;
   display: table;
   padding: 0;
   border-radius: 0;
   background: #ffffff;
   max-width: 1200px;
+  text-align: left;
 }
 .serach_inner form.search-form label {
   width: 95%;
@@ -559,11 +558,50 @@ input[type="submit"] {
   font-weight: normal;
   color: #3a4d5e;
   max-height: 1200px;
+  border: 0;
 }
 .serach_inner input.search-submit {
   padding: 8px 35px;
   margin: 5px 0;
   font-size: 20px;
+}
+button.search-submit {
+  border: 0;
+  background: transparent;
+}
+.serach_inner input[type="submit"]{
+  text-indent: -9999px;
+  z-index: 9999;
+  background: url(images/search.png) no-repeat 0 10px;
+  position: absolute;
+  margin:0;
+  background-size: 30px;
+}
+.search-box button{
+  background: transparent;
+  border: 0;
+}
+.search-outer {
+  background: rgb(0 0 0 / 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  text-align: center;
+  height: 100%;
+  transition: 1s height ease-in-out;
+  z-index: 999;
+}
+body.search-focus .search-outer{
+  visibility: visible;
+  transition: 1s height ease-in-out;
+}
+body.admin-bar .serach_inner{
+  margin-top: 32px;
+}
+body.admin-bar .search-close{
+  top:30px;
 }
 button.search-submit {
   border: 0;
@@ -589,23 +627,6 @@ input.search-field {
   position: absolute;
   margin:0;
   background-size: 30px;
-}
-.modal-content{
-  background: transparent;
-  border: 0;
-}
-.modal-dialog{
-  pointer-events: all;
-}
-.modal-open{
-  overflow-y: scroll;
-  padding: 0 !important;
-}
-body.admin-bar .serach_inner{
-  margin-top: 32px;
-}
-body.admin-bar .closepop{
-  top:30px;
 }
 /* --------- Slider --------- */
 #slider{
@@ -715,7 +736,7 @@ body.admin-bar .closepop{
 .page-numbers.current {
   margin-bottom: 16px;
 }
-p.logged-in-as a, span.posted_in a. .woocommerce ul.products li.product .price,.woocommerce div.product p.price, .woocommerce div.product span.price, .metabox a, .post-title, a.showcoupon,.woocommerce-message::before{
+p.logged-in-as a, .woocommerce ul.products li.product .price,.woocommerce div.product p.price, .woocommerce div.product span.price, .metabox a, .post-title, a.showcoupon,.woocommerce-message::before{
   color: #3a4d5e;
 }
 .read-more-btn a {

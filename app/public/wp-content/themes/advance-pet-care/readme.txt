@@ -4,7 +4,7 @@ Tags: wide-blocks, flexible-header, block-styles, left-sidebar, right-sidebar, o
 Requires at least: 5.0
 Tested up to: 5.6.2
 Requires PHP: 7.2.14
-Stable tag: 0.6.9
+Stable tag: 0.7
 License: GPLv3.0 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,7 +12,7 @@ Advance Pet Care is a robust, reliable and clean WordPress theme for animal care
 
 == Description ==
 
-Advance Pet Care is a robust, reliable and clean WordPress theme for animal care centre, pet house, dog washing, dog grooming centre, animal care centre, pet shop, veterinary doctor, animal health consultant, animal spa, wildlife, pet sellers, pet sitters, pet boarding, dog & puppy daycare or pet sitting pet adoption centers, veterinary doctors, blue cross-service volunteers, pet trainers, pet shelters, pet care centers, dog care, aquarium shops, cat food shops, animal accessories store, animal grooming and training, pet food shop and other suitable websites. This high quality theme is the best solution to build a professional looking website in just a few minutes. The foundation of this pet WP theme is made with Bootstrap framework which eases theme use. It is fully responsive, cross-browser compatible, deeply customizable and compatibility of this theme lets you translate the web page into ar_Arabic, zh_Chinese, fr_French, de_German, es_Spanish, it_Italian, ja_Japanese, ru_Russian, tr_Turkish languages.
+Advance Pet Care is a robust, reliable and clean WordPress theme for animal care centre, pet house, dog washing, dog grooming centre, animal care centre, pet shop, veterinary doctor, animal health consultant, animal spa, wildlife, pet sellers, pet sitters,  pet boarding, dog & puppy daycare or pet sitting pet adoption centers, veterinary doctors, blue cross-service volunteers, apiculture, beekeeping, fish breeding, hatchery, pet trainers, pet shelters, pet care centers, dog care, aquarium shops, cat food shops, animal accessories store, animal grooming and training, pet food shop and other suitable websites. This high quality theme is the best solution to build a professional looking website in just a few minutes. The foundation of this pet WP theme is made with Bootstrap framework which eases theme use. It is fully responsive, cross-browser compatible, deeply customizable and compatibility of this theme lets you translate the web page into ar_Arabic, zh_Chinese, fr_French, de_German, es_Spanish, it_Italian, ja_Japanese, ru_Russian, tr_Turkish languages.
 
 == Changelog ==
 
@@ -82,8 +82,8 @@ Advance Pet Care is a robust, reliable and clean WordPress theme for animal care
 * Added Arabic, Chinese, French, German, Spanish, Italian, Japanese, Russian, and Turkish languages files.
 
 = 0.5.1 =
-* Added slider content alignment setting in customizer. 
-* Added slider excerpt length setting in customizer. 
+* Added slider content alignment setting in customizer.
+* Added slider excerpt length setting in customizer.
 * Added slider image opacity setting in customizer.
 
 = 0.5.2 =
@@ -191,6 +191,14 @@ Advance Pet Care is a robust, reliable and clean WordPress theme for animal care
 
 = 0.6.9 =
 * Optimized home page css.
+
+= 0.7 =
+* Changed search code.
+* Added some classes in global color css.
+* Removed smoothscroll.js file from theme.
+* Removed ie.css file from theme.
+* Removed email sanitization function.
+* Added suffix to enqueued file in function.php.
 
 == Resources ==
 

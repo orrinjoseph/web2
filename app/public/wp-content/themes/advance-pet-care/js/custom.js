@@ -1,9 +1,9 @@
 jQuery(function($){
   "use strict";
   jQuery('.main-menu-navigation > ul').superfish({
-    delay:       0,                            
-    animation:   {opacity:'show',height:'show'},  
-    speed:       'fast'                        
+    delay: 0,                            
+    animation: {opacity:'show',height:'show'},  
+    speed: 'fast'                        
   });
 });
 
@@ -27,6 +27,8 @@ jQuery(document).ready(function () {
   });
 
   advance_pet_care_MobileMenuInit();
+
+  advance_pet_care_search_focus();
 });
 
 (function( $ ) {
@@ -92,6 +94,54 @@ function advance_pet_care_MobileMenuInit() {
     if (e.keyCode === 27 ) {
       jQuery('body').removeClass('noscroll');
       advance_pet_care_lastTab.focus();
+    };
+  });
+}
+
+function advance_pet_care_search_focus() {
+
+  /* First and last elements in the menu */
+  var advance_pet_care_search_firstTab = jQuery('.serach_inner input[type="search"]');
+  var advance_pet_care_search_lastTab  = jQuery('button.search-close'); /* Cancel button will always be last */
+
+  jQuery(".search-open").click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    jQuery('body').addClass("search-focus");
+    advance_pet_care_search_firstTab.focus();
+  });
+
+  jQuery("button.search-close").click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    jQuery('body').removeClass("search-focus");
+    jQuery(".search-open").focus();
+  });
+
+  /* Redirect last tab to first input */
+  advance_pet_care_search_lastTab.on('keydown', function (e) {
+    if (jQuery('body').hasClass('search-focus'))
+    if ((e.which === 9 && !e.shiftKey)) {
+      e.preventDefault();
+      advance_pet_care_search_firstTab.focus();
+    }
+  });
+
+  /* Redirect first shift+tab to last input*/
+  advance_pet_care_search_firstTab.on('keydown', function (e) {
+    if (jQuery('body').hasClass('search-focus'))
+    if ((e.which === 9 && e.shiftKey)) {
+      e.preventDefault();
+      advance_pet_care_search_lastTab.focus();
+    }
+  });
+
+  /* Allow escape key to close menu */
+  jQuery('.serach_inner').on('keyup', function(e){
+    if (jQuery('body').hasClass('search-focus'))
+    if (e.keyCode === 27 ) {
+      jQuery('body').removeClass('search-focus');
+      advance_pet_care_search_lastTab.focus();
     };
   });
 }

@@ -14,146 +14,55 @@ get_header(); ?>
 <main role="main" id="maincontent" class="our-services">
   <div class="innerlightbox">
 	  <div class="container">
-      <?php
-      $advance_pet_care_left_right = get_theme_mod( 'advance_pet_care_layout_options','Right Sidebar');
-      if($advance_pet_care_left_right == 'Left Sidebar'){ ?>
-        <div class="row">
-          <div class="col-lg-4 col-md-4">
-            <?php get_sidebar();?>
-          </div>
-          <div id="post-<?php the_ID(); ?>" <?php post_class('col-lg-8 col-md-8'); ?>>
-            <?php if ( have_posts() ) :
-              /* Start the Loop */
-              while ( have_posts() ) : the_post();
-                get_template_part( 'template-parts/content' , get_post_format() ); 
-              endwhile;
-              else :
-                get_template_part( 'no-results' );
-              endif; 
-            ?>
-            <?php if( get_theme_mod( 'advance_pet_care_blog_post_pagination',true) != '') { ?>
-          	  <div class="navigation">
-                <?php
-                  // Previous/next page navigation.
-                  the_posts_pagination( array(
-                      'prev_text'          => __( 'Previous page', 'advance-pet-care' ),
-                      'next_text'          => __( 'Next page', 'advance-pet-care' ),
-                      'before_page_number' => '<span class="meta-nav screen-reader-text text-uppercase p-2">' . __( 'Page', 'advance-pet-care' ) . ' </span>',
-                  ) );
-                ?>
+          <div class="mt-5">
+            <div class="row mt-5 mb-5" style="background-color:green;">
+                <div class="col-lg-4 col-md-4 ml-0 pl-0">
+                  <div class="" style="background-size: 100% 100%; height:300px; background-image: url(<?php echo get_theme_file_uri('/images/iguana.png')?>);">
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4" style="color:white; text-align:center;">
+                  Get to Know Each Animal at our ZOO
+                </div>
+                <div class="col-lg-4 col-md-4 mr-0 pr-0">
+                  <div class="" style="background-size: 100% 100%; height:300px; background-image: url(<?php echo get_theme_file_uri('/images/tiger3.png')?>);">
+                  </div>
+                </div>
               </div>
-            <?php } ?> 
-    	    </div>
-        </div>
-      <?php }else if($advance_pet_care_left_right == 'Right Sidebar'){ ?>
-        <div class="row">
-          <div id="post-<?php the_ID(); ?>" <?php post_class('col-lg-8 col-md-8'); ?>>
-            <?php if ( have_posts() ) :
-              /* Start the Loop */
-              while ( have_posts() ) : the_post();
-                get_template_part( 'template-parts/content'  , get_post_format() ); 
-              endwhile;
-              else :
-                get_template_part( 'no-results' );
-              endif; 
-            ?>
-            <?php if( get_theme_mod( 'advance_pet_care_blog_post_pagination',true) != '') { ?>
-              <div class="navigation">
-                <?php
-                  // Previous/next page navigation.
-                  the_posts_pagination( array(
-                      'prev_text'          => __( 'Previous page', 'advance-pet-care' ),
-                      'next_text'          => __( 'Next page', 'advance-pet-care' ),
-                      'before_page_number' => '<span class="meta-nav screen-reader-text text-uppercase p-2">' . __( 'Page', 'advance-pet-care' ) . ' </span>',
-                  ) );
-                ?>
+
+              <div class="row mt-5 mb-5"  >
+                <div class="col-lg-4 col-md-4 ml-0 pl-0">
+                View Phots taken at the zoo
+                </div>
+                <div class="col-lg-8 col-md-8" style="color:white; text-align:center;">
+                  
+                  <div class="" style="background-size: 100% 100%; height:300px; background-image: url(<?php echo get_theme_file_uri('/images/photo.png')?>);">
+                  </div>
+                </div>
               </div>
-            <?php } ?>  
-          </div>
-      	  <div class="col-lg-4 col-md-4">
-      			<?php get_sidebar();?>
-      	  </div>
-        </div>
-      <?php }else if($advance_pet_care_left_right == 'One Column'){ ?>
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <?php if ( have_posts() ) :
-            /* Start the Loop */
-            while ( have_posts() ) : the_post();
-              get_template_part( 'template-parts/content' , get_post_format() ); 
-            endwhile;
-            else :
-              get_template_part( 'no-results' );
-            endif; 
-          ?>
-          <?php if( get_theme_mod( 'advance_pet_care_blog_post_pagination',true) != '') { ?>
-            <div class="navigation">
-              <?php
-                // Previous/next page navigation.
-                the_posts_pagination( array(
-                    'prev_text'          => __( 'Previous page', 'advance-pet-care' ),
-                    'next_text'          => __( 'Next page', 'advance-pet-care' ),
-                    'before_page_number' => '<span class="meta-nav screen-reader-text text-uppercase p-2">' . __( 'Page', 'advance-pet-care' ) . ' </span>',
-                ) );
-              ?>
+
+            <div class="row mt-5 mb-5">
+              <div class="col-lg-4 col-md-4">
+                <div class="" style="background-size: 100% 100%; height:300px; background-image: url(<?php echo get_theme_file_uri('/images/events-animal.png')?>);">
+                </div>
+              </div>
+
+              <div class="col-lg-8 col-md-8">
+              Click Here To See upcoming events
+              </div>
             </div>
-          <?php } ?>  
-        </div>
-      <?php }else if($advance_pet_care_left_right == 'Grid Layout'){ ?>
-        <div id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-          <?php if ( have_posts() ) :
-            /* Start the Loop */
-            while ( have_posts() ) : the_post();
-              get_template_part( 'template-parts/grid-layout' ); 
-            endwhile;
-            else :
-              get_template_part( 'no-results' );
-            endif; 
-          ?>
-          <?php if( get_theme_mod( 'advance_pet_care_blog_post_pagination',true) != '') { ?>
-            <div class="navigation">
-              <?php
-                // Previous/next page navigation.
-                the_posts_pagination( array(
-                    'prev_text'          => __( 'Previous page', 'advance-pet-care' ),
-                    'next_text'          => __( 'Next page', 'advance-pet-care' ),
-                    'before_page_number' => '<span class="meta-nav screen-reader-text text-uppercase p-2">' . __( 'Page', 'advance-pet-care' ) . ' </span>',
-                ) );
-              ?>
+          <div class="row mt-5 mb-5">
+            
+            <div class="col-lg-6 col-md-6">
+            Come Learn More About Animals 
             </div>
-          <?php } ?>  
-        </div>
-      <?php } else { ?>
-        <div class="row">
-          <div id="post-<?php the_ID(); ?>" <?php post_class('col-lg-8 col-md-8'); ?>>
-            <?php if ( have_posts() ) :
-              /* Start the Loop */
-              while ( have_posts() ) : the_post();
-                get_template_part( 'template-parts/content' , get_post_format() ); 
-              endwhile;
-              else :
-                get_template_part( 'no-results' );
-              endif; 
-            ?>
-            <?php if( get_theme_mod( 'advance_pet_care_blog_post_pagination',true) != '') { ?>
-              <div class="navigation">
-                <?php
-                  // Previous/next page navigation.
-                  the_posts_pagination( array(
-                      'prev_text'          => __( 'Previous page', 'advance-pet-care' ),
-                      'next_text'          => __( 'Next page', 'advance-pet-care' ),
-                      'before_page_number' => '<span class="meta-nav screen-reader-text text-uppercase p-2">' . __( 'Page', 'advance-pet-care' ) . ' </span>',
-                  ) );
-                ?>
-              </div>
-            <?php } ?>  
+            <div class="col-lg-4 col-md-4">
+            <div class="" style="background-size: 100% 100%; height:300px; background-image: url(<?php echo get_theme_file_uri('/images/learn-animal.png')?>);">
+            </div>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-4">
-            <?php get_sidebar();?>
           </div>
-        </div>  
-      <?php }?>
-		  <div class="clearfix"></div>
-    </div>
+        
+  </div>
   </div>
 </main>
 

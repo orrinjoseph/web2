@@ -1,0 +1,59 @@
+[20-Mar-2021 12:52:09 UTC] PHP Parse error:  syntax error, unexpected 'university_post_types' (T_STRING) in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 2
+[20-Mar-2021 12:52:15 UTC] PHP Parse error:  syntax error, unexpected 'university_post_types' (T_STRING) in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 2
+[20-Mar-2021 12:52:17 UTC] PHP Parse error:  syntax error, unexpected 'university_post_types' (T_STRING) in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 2
+[20-Mar-2021 12:52:58 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 11
+[20-Mar-2021 12:53:00 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 11
+[20-Mar-2021 12:54:17 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_post_types' not found or invalid function name in C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php on line 287
+[20-Mar-2021 12:54:17 UTC] PHP Stack trace:
+[20-Mar-2021 12:54:17 UTC] PHP   1. {main}() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\edit.php:0
+[20-Mar-2021 12:54:17 UTC] PHP   2. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\edit.php:10
+[20-Mar-2021 12:54:17 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\admin.php:34
+[20-Mar-2021 12:54:17 UTC] PHP   4. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-load.php:37
+[20-Mar-2021 12:54:17 UTC] PHP   5. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-config.php:77
+[20-Mar-2021 12:54:17 UTC] PHP   6. do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-settings.php:557
+[20-Mar-2021 12:54:17 UTC] PHP   7. WP_Hook->do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\plugin.php:484
+[20-Mar-2021 12:54:17 UTC] PHP   8. WP_Hook->apply_filters() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php:311
+[20-Mar-2021 12:54:21 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_post_types' not found or invalid function name in C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php on line 287
+[20-Mar-2021 12:54:21 UTC] PHP Stack trace:
+[20-Mar-2021 12:54:21 UTC] PHP   1. {main}() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:0
+[20-Mar-2021 12:54:21 UTC] PHP   2. require() C:\Users\Tonio\Local Sites\zoo\app\public\index.php:17
+[20-Mar-2021 12:54:21 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-blog-header.php:13
+[20-Mar-2021 12:54:21 UTC] PHP   4. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-load.php:37
+[20-Mar-2021 12:54:21 UTC] PHP   5. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-config.php:77
+[20-Mar-2021 12:54:21 UTC] PHP   6. do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-settings.php:557
+[20-Mar-2021 12:54:21 UTC] PHP   7. WP_Hook->do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\plugin.php:484
+[20-Mar-2021 12:54:21 UTC] PHP   8. WP_Hook->apply_filters() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php:311
+[20-Mar-2021 12:54:21 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_post_types' not found or invalid function name in C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php on line 287
+[20-Mar-2021 12:54:21 UTC] PHP Stack trace:
+[20-Mar-2021 12:54:21 UTC] PHP   1. {main}() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\admin-ajax.php:0
+[20-Mar-2021 12:54:21 UTC] PHP   2. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\admin-ajax.php:22
+[20-Mar-2021 12:54:21 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-load.php:37
+[20-Mar-2021 12:54:21 UTC] PHP   4. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-config.php:77
+[20-Mar-2021 12:54:21 UTC] PHP   5. do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-settings.php:557
+[20-Mar-2021 12:54:21 UTC] PHP   6. WP_Hook->do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\plugin.php:484
+[20-Mar-2021 12:54:21 UTC] PHP   7. WP_Hook->apply_filters() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php:311
+[20-Mar-2021 12:54:36 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_post_types' not found or invalid function name in C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php on line 287
+[20-Mar-2021 12:54:36 UTC] PHP Stack trace:
+[20-Mar-2021 12:54:36 UTC] PHP   1. {main}() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\admin-ajax.php:0
+[20-Mar-2021 12:54:36 UTC] PHP   2. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\admin-ajax.php:22
+[20-Mar-2021 12:54:36 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-load.php:37
+[20-Mar-2021 12:54:36 UTC] PHP   4. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-config.php:77
+[20-Mar-2021 12:54:36 UTC] PHP   5. do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-settings.php:557
+[20-Mar-2021 12:54:36 UTC] PHP   6. WP_Hook->do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\plugin.php:484
+[20-Mar-2021 12:54:36 UTC] PHP   7. WP_Hook->apply_filters() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php:311
+[20-Mar-2021 12:54:50 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_post_types' not found or invalid function name in C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php on line 287
+[20-Mar-2021 12:54:50 UTC] PHP Stack trace:
+[20-Mar-2021 12:54:50 UTC] PHP   1. {main}() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\admin-ajax.php:0
+[20-Mar-2021 12:54:50 UTC] PHP   2. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-admin\admin-ajax.php:22
+[20-Mar-2021 12:54:50 UTC] PHP   3. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-load.php:37
+[20-Mar-2021 12:54:50 UTC] PHP   4. require_once() C:\Users\Tonio\Local Sites\zoo\app\public\wp-config.php:77
+[20-Mar-2021 12:54:50 UTC] PHP   5. do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-settings.php:557
+[20-Mar-2021 12:54:50 UTC] PHP   6. WP_Hook->do_action() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\plugin.php:484
+[20-Mar-2021 12:54:50 UTC] PHP   7. WP_Hook->apply_filters() C:\Users\Tonio\Local Sites\zoo\app\public\wp-includes\class-wp-hook.php:311
+[20-Mar-2021 19:07:52 UTC] PHP Parse error:  syntax error, unexpected ''capability_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 7
+[20-Mar-2021 19:07:57 UTC] PHP Parse error:  syntax error, unexpected ''capability_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 7
+[20-Mar-2021 19:08:42 UTC] PHP Parse error:  syntax error, unexpected ''capability_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 7
+[20-Mar-2021 19:08:43 UTC] PHP Parse error:  syntax error, unexpected ''capability_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 7
+[20-Mar-2021 19:10:19 UTC] PHP Parse error:  syntax error, unexpected ''capability_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 7
+[20-Mar-2021 19:10:21 UTC] PHP Parse error:  syntax error, unexpected ''capability_type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\mu-plugins\zoo-post-types.php on line 7
+[20-Mar-2021 19:49:58 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\Users\Tonio\Local Sites\zoo\app\public\wp-content\themes\advance-pet-care\header.php on line 29
